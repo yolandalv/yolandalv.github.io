@@ -1,0 +1,178 @@
+@mixin _contactChild {
+  & > div {
+    position: relative;
+    float: left;
+    width: 20%;
+    padding: 3% 0;
+    border: 1px solid $_alto;
+    border-radius: 5px;
+    margin-right: 3%;
+    text-align: center;
+  }
+  .email {
+    width: 30%;
+
+  }
+  .wechat {
+    img {
+      display: inline-block;
+      width: 30px;
+      margin-top: -5px;
+    }
+  }
+  .QQ {
+    margin-right: 1%;
+    img {
+      display: inline-block;
+      width: 17px;
+      margin-top: -5px;
+    }
+  }
+}
+@mixin _borderChild {
+  & > div {
+    border-bottom: 1px dashed;
+    margin-bottom: 4%;
+  }
+  span {
+    color: #555;
+  }
+  .other {
+    img {
+      width: 17px;
+    }
+  }
+}
+.container .content {
+  #about_me {
+    @include _common;
+    color: $_emperor;
+    font-size: 16px;
+    & > div:first-child {
+      position: relative;
+      float: left;
+      width: 40%;
+      box-sizing: border-box;
+      padding: 0 5%;
+      border-right: 1px solid $_alto;
+      text-align: center;
+
+    }
+    .img {
+      width: 80%;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    }
+    & > div:nth-child(2) {
+      position: relative;
+      float: left;
+      width: 60%;
+      padding: 0 8.3%;
+      color: $_hippieGreen;
+      line-height: 2.2;
+      padding-top: 2%;
+      @include _borderChild;
+    }
+
+    .contact {
+      @include _common;
+      overflow: hidden;
+      font-size: 20px;
+      margin-top: 8%;
+      margin-left: 1%;
+      @include _contactChild;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container .content #about_me {
+    font-size: 15px;
+    & > div:nth-child(2) {
+      line-height: 2;
+      padding-top: 1%;
+    }
+    .contact {
+      font-size: 17px;
+      & > div {
+        width: 21%;
+        margin-right: 2%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .content #about_me {
+    & > div:first-child {
+      width: 90%;
+      border-right: none;
+      margin: 0 5%;
+      padding: 0;
+      padding-bottom: 5%;
+      border-bottom: 1px solid $_alto;
+
+    }
+    .img {
+      width: 35%;
+      border-radius: 50%;
+      border-bottom: 1px solid $_alto;
+    }
+    & > div:nth-child(2) {
+      width: 90%;
+      margin: 0 5%;
+      padding: 5% 0 2% 0;
+      border-bottom: 1px solid $_alto;
+      text-align: center;
+      & > div {
+        border-bottom: none;
+        margin-bottom: 2%;
+      }
+    }
+    .contact {
+      & > div {
+        width: 30%;
+        margin: 1% 7%;
+      }
+      .email {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .container .content #about_me {
+    font-size: 14px;
+    .img {
+      width: 30%;
+    }
+    .contact {
+      font-size: 15px;
+      & > div {
+        margin: 1% 5%;
+        width: 34%;
+      }
+      .email {
+        width: 44%;
+      }
+    }
+  }
+
+}
+@media only screen and (max-width: 480px){
+
+  .container .content #about_me .contact {
+    margin-top: 5%;
+    & > div {
+      float: none;
+      width: 60%;
+      margin: 3% auto;
+    }
+    .email {
+      width: 70%;
+    }
+    .QQ {
+      margin: 3% auto;
+    }
+  }
+}

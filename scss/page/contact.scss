@@ -1,0 +1,153 @@
+
+@mixin _contactChild {
+  & > div {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 40%;
+    margin: 0 5%;
+    box-shadow: -5px 0px 5px rgba(0, 0, 0, .04),0px 5px 5px rgba(0, 0, 0, .13),5px 0px 5px rgba(0, 0, 0, .05);
+    -webkit-transition:all 0.6s ease-out;
+       -moz-transition:all 0.6s ease-out;
+        -ms-transition:all 0.6s ease-out;
+         -o-transition:all 0.6s ease-out;
+            transition:all 0.6s ease-out;
+    img {
+      width: 100%;
+      -webkit-transition:all 0.6s ease-out;
+         -moz-transition:all 0.6s ease-out;
+          -ms-transition:all 0.6s ease-out;
+           -o-transition:all 0.6s ease-out;
+              transition:all 0.6s ease-out;
+    }
+
+    &:hover img {
+      -webkit-transform:rotateY(360deg) scale(0.8);
+         -moz-transform:rotateY(360deg) scale(0.8);
+          -ms-transform:rotateY(360deg) scale(0.8);
+           -o-transform:rotateY(360deg) scale(0.8);
+              transform:rotateY(360deg) scale(0.8);
+    }
+  }
+}
+.container .content {
+  #contact {
+    @include _common;
+    text-align: center;
+    span {
+      padding: 0 2%;
+      font-weight: bold;
+    }
+    & > div:first-child,
+    & > div:nth-child(2) {
+      -webkit-transition:all 0.6s ease-out;
+         -moz-transition:all 0.6s ease-out;
+          -ms-transition:all 0.6s ease-out;
+           -o-transition:all 0.6s ease-out;
+              transition:all 0.6s ease-out;
+    }
+    & > div:first-child {
+      margin-top: 5%;
+      font-size: 38px;
+      span {
+        background-color: $_morningGlory;
+      }
+    }
+    & > div:nth-child(2) {
+      font-size: 25px;
+      margin-top: 2%;
+      margin-bottom: 10%;
+      span {
+        background-color: $_coral;
+      }
+    }
+    .contact {
+      @include _common;
+      margin-bottom: 5%;
+      @include _contactChild;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container .content #contact > div:first-child {
+    font-size: 35px;
+  }
+  .container .content #contact > div:nth-child(2) {
+    font-size: 22px;
+  }
+
+}
+
+
+@media only screen and (max-width: 992px){
+
+  .container .content #contact > div:first-child {
+    font-size: 31px;
+  }
+  .container .content #contact > div:nth-child(2) {
+    font-size: 20px;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 2%;
+  }
+  .container .content #contact > div:first-child {
+    font-size: 30px;
+  }
+  .container .content #contact > div:nth-child(2) {
+    font-size: 18px;
+  }
+  .container .content #contact .contact > div {
+    width: 46%;
+    margin: 0 2%;
+  }
+}
+
+
+@media only screen and (max-width: 600px){
+  .container .content #contact > div:first-child {
+    font-size: 26px;
+  }
+  .container .content #contact > div:nth-child(2) {
+    font-size: 15px;
+  }
+  .container .content #contact .contact > div {
+    width: 60%;
+    margin: 5% 20%;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .container .content #contact > div:first-child {
+    font-size: 23px;
+  }
+  .container .content #contact > div:nth-child(2) {
+    font-size: 13px;
+  }
+  .container .content #contact .contact > div {
+    width: 80%;
+    margin: 3% 10%;
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1280px) {
+
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+
+}

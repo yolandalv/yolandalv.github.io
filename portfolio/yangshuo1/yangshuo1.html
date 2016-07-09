@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS-盒子浮动与定位</title>
+<style type="text/css">
+	body{
+	background-image:url(pic/bg1.jpg); 
+	background-repeat: repeat;
+	color: gray;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:13px;
+	line-height:1.5;
+	margin: 0px;
+	
+
+}
+
+    #father{
+    	width: 900px;
+    	height: 1000px;
+    	background-color:white;
+    	margin-left: auto;
+	    margin-right: auto;
+	    background-image:url(pic/logo.gif);
+	    background-repeat: no-repeat;
+	    background-position: 328px 0px;
+	    position: relative;
+	    top: 5px;
+
+
+    }
+    
+    #intro{
+    	width: 300px;
+    	border:dotted 1px gray;
+    	margin: 5px;
+    	padding: 5px;
+    	float: left;
+
+    }
+
+    #intro img.pic1{
+    	width: 280px;
+    	height: 220px;
+    	border: solid gray 5px;
+    }
+
+
+    #scene{
+    	width: 555px;
+    	border:1px gray dotted;
+    	margin: 5px;
+    	padding: 5px;
+    	float: right;
+    	background-image:url(pic/bg3.jpg);
+    	position: relative;
+    	top: 145px;
+    }
+
+    #scene img{
+    	width: 200px;
+    	height: 170px;
+    	border:5px gray solid;
+    	float: left;
+    }
+    
+    #scene p.p2{
+    	margin-top: 50px;
+    	margin-bottom: 100px;
+    }
+
+    
+
+    #scene1{
+    	width: 450px;
+    	border-top: 1px blue dotted;
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+
+    #scene2{
+    	width: 450px;
+    	border-top: 1px blue dotted;
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+
+    #scene2 p.p4{
+    	margin-top: 35px;
+    }
+
+    #food{
+    	width: 300px;
+    	border:1px gray dotted;
+    	float: left;
+    	margin-left: 5px;
+    	padding: 5px;
+
+    }
+
+    #food img.pic5{
+    	width: 280px;
+    	height: 220px;
+    	border:5px gray solid;
+    }
+
+    #extraDiv1{
+    	position:absolute;
+    	top: 665px;
+    	left: 700px;
+    }
+</style>
+</head>
+
+<body>
+<div id="father">
+
+    <div id="intro">
+        <h3 class="title1"><span><img src="pic/title1.gif"></span></h3>
+        <img class="pic1" src="pic/4.jpg" />
+        <p class="p1"><span>阳朔县位桂林市区东南,隶属广西桂林市,位于漓江西岸,风景秀丽。建县始于隋开皇十年（公元590年），距今已1400余年。县城距桂林市区65公里,居住着汉、壮、瑶、回等13个民族。</span></p>
+    </div>
+    
+    <div id="scene">
+        <h3 class="title2"><span>阳朔风光</span></h3>
+        <img class="pic2" src="pic/2.jpg" />
+        <p class="p2"><span>“桂林山水甲天下，阳朔山水甲桂林”，高度概括了阳朔的自然风光在世界上所占有的重要位置。“山青、水秀、峰奇、洞巧”，为天下四绝。阳朔百里山川，处处奇山秀水，自然景观与人文景观交相辉映，被誉为“中国旅游名县”。</span></p>
+        <div id="scene1">
+            <h3  class="title21"><span>阳朔漓江景区</span></h3>
+            <img class="pic3" src="pic/1.jpg" />
+            <p  class="p3"><span>这一景区江水清澄见底，宛如罗带的漓江蜿蜒于苍翠雄奇的群山之间，人称“百里漓江，百里画廊”。江边名山密集、千姿百态、翠竹丛丛，村落屋宇掩映在绿树丛中，构成一幅美丽的山水长轴，宛若一道千回百转的画廊。县境自杨堤冠岩村顺江而下，主要景点有：桃源仙境、浪石胜境、仙人推磨、绣山彩壁、鸳鸯戏水、九马画山、七姐下凡、螺蛳山等二十多处。乘舟游览这一景区，好似遨游仙宫，如入梦境，“分明看见青山顶，船在青山顶上行”。</span></p>
+     	</div>
+        <div id="scene2">
+            <h3  class="title22"><span>遇龙河景区</span></h3>
+            <img class="pic4"  src="pic/3.jpg" />
+            <p class="p4"><span>遇龙河是阳朔县第二大河，全长42.5公里，至书童山汇入漓江。河两岸奇峰秀丽。竹木苍翠、水质清澈、景色宜人。主要景点有：犀牛塘、水厄风光、五指山、朝阳寨、仙桂桥、遇龙桥、归义古城遗址、汉墓群、东晕岩、八仙过海等近20处。遇龙河田园风光旅游，最适宜采用三、五成群结伴徒步的游赏方式。遇龙河水清见底，一切都是静悄悄的，偶有飞鸟鸣聚，水车吱吱呀呀，旅游者可感受真正“诗境家园”的意韵。</span></p>
+        </div>
+    </div>
+    
+  <div id="food"> 
+        <h3  class="title3"><span><img src="pic/title3.gif"></span></h3>
+        <img class="pic5"   src="pic/7.jpg" />
+        <p class="p5"><span>漓江啤酒鱼：不吃不知道，一吃吓一跳，大名如雷贯耳，如果不试一下就真的枉费到此一游。啤酒鱼有点像川菜中火锅鱼的做法，先把鱼在油里煎一煎，再放啤酒及各种调料烧制而成。烧的器具很特别，鱼放在一个平底的盘子里，盘子下面是一个盆子，放了些水，再下面才是火，而不像是川菜火锅直接将锅放在炉火上面。这样上面的鱼不易烧糊且受热均匀，入口果然鲜辣可口，无一丝鱼本身的腥味。对了，一定要吃带鳞的，正宗的啤酒鱼，鱼鳞都炸得非常脆，好吃极了。</span> </p>
+    </div>
+
+
+<div id="extraDiv1"><span><img src="pic/bg0.gif"></span></div>	 	<!--此处为备用盒子，不需要时不定义-->
+<div id="extraDiv2"><span></span></div>		<!--此处为备用盒子，不需要时不定义-->
+<div id="extraDiv3"><span></span></div>		<!--此处为备用盒子，不需要时不定义-->
+
+</div>  <!--father end -->
+
+</body>
+</html>
